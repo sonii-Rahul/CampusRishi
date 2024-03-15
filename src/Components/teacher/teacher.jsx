@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import Cookies from 'js-cookie';
 import TnavBar from './TnavBar.jsx';
+import SideBar from './Dashboard/SideBar.jsx';
+import DashHome from './Dashboard/DashHome.jsx';
 
 const Teacher = () => {
   const location = useLocation();
@@ -45,16 +47,14 @@ const Teacher = () => {
       }
     } catch (error) {
       console.error('An error occurred during logout:', error);
-      // Optionally, provide user feedback about the error.
     }
   };
 
   return (
-    <>
-      {user && <TnavBar user={user} logingout={handleLogout} />}
-      <button onClick={handleLogout} aria-label="Logout">
-        Logout
-      </button>
+    <><div className='flex'>
+      {user &&  <SideBar user={user} logingout={handleLogout}/>}
+      <DashHome/>
+      </div>
     </>
   );
 };
