@@ -1,12 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-   content: [
+  content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'salsa': ['Salsa', 'cursive'],
+      },
+      fontWeight: {
+        regular: 400,
+      },
+      fontStyle: {
+        normal: 'normal',
+      },
+    },
   },
   plugins: [],
 }
-

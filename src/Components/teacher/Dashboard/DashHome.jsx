@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState,useEffect } from 'react';
 
 const people = [
   {
@@ -19,103 +20,7 @@ const people = [
     image:
       'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
   },
-  {
-    name: ' shyam das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  },
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  },
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
-  ,
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
-  ,
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
-  ,
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
-  ,
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
-  ,
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
-  ,
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
-  ,
-  {
-    name: ' raju das',
-    title: 'Mca',
-    department: 'Engineering',
-    email: 'john@devui.com',
-    role: 'Student',
-    image:
-      'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  }
+  
 
   
 
@@ -124,6 +29,21 @@ const people = [
 ];
 
 function DashHome(props) {
+  const [people, setPeople] = useState([]); // State to store fetched data
+
+  useEffect(() => {
+    // Function to fetch data from the backend
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('YOUR_BACKEND_API_ENDPOINT'); // Replace 'YOUR_BACKEND_API_ENDPOINT' with your actual API endpoint
+        setPeople(response.data); // Update state with fetched data
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData(); // Call the fetchData function when the component mounts
+  }, []);
   return (
     <>
       <div className="w-full m-8 py-4">

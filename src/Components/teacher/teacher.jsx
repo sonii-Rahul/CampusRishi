@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import Cookies from 'js-cookie';
-import TnavBar from './TnavBar.jsx';
 import SideBar from './Dashboard/SideBar.jsx';
 import DashHome from './Dashboard/DashHome.jsx';
+import UserContext from '../context/userContext.js';
 
 const Teacher = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [user, setUser] = useState(location.state?.user);
+  const {user,setUser} = useContext(UserContext)
 
   useEffect(() => {
     const checkToken = async () => {
@@ -18,22 +18,23 @@ const Teacher = () => {
         navigate('/login');
       } else {
         try {
-          const response = await Axios.get('/api/v1/users/me', {
+          const response = await Axios.post('/api/v1/users/verify', {
             headers: {
               Authorization: `Bearer ${accessToken}`,
             },
           });
           if (response.status === 200) {
-            setUser(response.data);
+            console.log(response.data.data)
+            setUser(response.data.data.user);
           }
         } catch (error) {
           console.error('An error occurred during token verification:', error);
-          // Optionally, provide user feedback about the error.
+          
         }
       }
     };
     checkToken();
-  }, [navigate]);
+  }, [navigate,setUser]);
 
   const handleLogout = async () => {
     try {
@@ -52,8 +53,8 @@ const Teacher = () => {
 
   return (
     <><div className='flex'>
-      {user &&  <SideBar user={user} logingout={handleLogout}/>}
-      <DashHome/>
+      {<SideBar logingout={handleLogout}/>}
+      <Outlet/>
       </div>
     </>
   );

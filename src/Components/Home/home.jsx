@@ -1,8 +1,29 @@
 import React from 'react'
+import NavBar from './NavBar'
+import SectionOne from './SectionOne'
+import SectionTwo from './SectionTwo'
+import SectionThree from './SectionThree'
+import SectionFour from './SectionFour'
+import Footer from './Footer'
+import {motion} from "framer-motion"
 
 function home() {
   return (
-    <div>home</div>
+    <>
+     <motion.div
+    
+     
+    
+  >
+    <NavBar/>
+    <SectionOne/>
+    <SectionTwo/>
+    <SectionThree/>
+    <SectionFour/>
+    <Footer/>
+    </motion.div>
+    
+    </>
   )
 }
 
