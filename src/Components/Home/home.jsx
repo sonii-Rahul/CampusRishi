@@ -6,6 +6,7 @@ import SectionThree from './SectionThree'
 import SectionFour from './SectionFour'
 import Footer from './Footer'
 import {motion} from "framer-motion"
+import SectionFive from './SectionFive'
 
 function home() {
   return (
@@ -19,8 +20,11 @@ function home() {
     <SectionOne/>
     <SectionTwo/>
     <SectionThree/>
+    <SectionFive/>
     <SectionFour/>
+   
     <Footer/>
+    
     </motion.div>
     
     </>

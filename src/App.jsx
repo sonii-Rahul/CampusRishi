@@ -5,6 +5,7 @@ import Home from "./Components/Home/home.jsx"
 import Admin from './Components/admin/admin.jsx'
 import Teacher from "./Components/teacher/teacher.jsx"
 import Student from './Components/student/student.jsx'
+import Error from './Components/Error/Error.jsx'
 
 
 import './App.css'
@@ -40,6 +41,7 @@ function App() {
           <Route path='addclass' element={<AddClass/>} />
         </Route>
         <Route path='/student' element={<Student />} />
+        <Route path='*' element={<Error/>}/>
       </Routes>
     </BrowserRouter>
 
