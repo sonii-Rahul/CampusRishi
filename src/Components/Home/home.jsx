@@ -24,7 +24,6 @@ function home() {
     <SectionFive/>
     <SectionFour/>
     <FaqThree/>
-   
     <Footer/>
     
     </motion.div>
