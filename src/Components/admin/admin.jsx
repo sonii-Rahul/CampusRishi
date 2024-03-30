@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import {Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import Cookies from 'js-cookie';
 import UserContext from '../context/userContext.js';
@@ -57,10 +57,11 @@ const handleLogout = async () => {
     return <div>Loading...</div>;
   }
   return (
-    <>
-    <SideBar logingout={handleLogout} />
-  
-    </>
+    <><div className='flex'>
+    {<SideBar logingout={handleLogout}/>}
+    <Outlet/>
+    </div>
+  </>
   )
 }
 
