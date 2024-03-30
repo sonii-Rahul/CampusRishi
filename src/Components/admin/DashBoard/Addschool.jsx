@@ -6,12 +6,12 @@ function AddSchool() {
   const { user } = useContext(UserContext);
 
   const [formData, setFormData] = useState({
-    schoolFullName: '',
+    SchoolfullName: '',
     location: '',
     username: '',
     password: '',
     role: '',
-    tenentname: user ? user.fullName : '', // Set initial value to user's fullName
+    tenentname: user ? user.tenentid : '', // Set initial value to user's fullName
   });
 
   const handleChange = (e) => {
@@ -24,17 +24,30 @@ function AddSchool() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
     try {
       // Make the POST request to your API endpoint
-      const response = await axios.post('your-api-endpoint', formData);
+      console.log(formData)
+      const response = await axios.post('/api/v1/school/schoolRegister', formData);
       console.log('Response:', response.data);
-      // Optionally, you can handle success or navigate to another page
+  
+      // Clear the form data upon successful submission
+      setFormData({
+        SchoolfullName: '',
+        location: '',
+        username: '',
+        password: '',
+        role: '',
+        tenentname: user ? user.fullName : '',
+      });
+  
+      // Display success message using a popup or any other method
+      alert('Form submitted successfully!');
     } catch (error) {
       console.error('Error:', error);
       // Optionally, you can handle errors and display a message to the user
     }
   };
+  
 
   return (
     <div className="p-4 justify-center max-h-screen overflow-y-auto container max-w-screen-lg mx-auto">
@@ -50,16 +63,16 @@ function AddSchool() {
           <p className="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
-              <label htmlFor="schoolFullName" className="block text-sm font-medium leading-6 text-gray-900">
+              <label htmlFor="SchoolfullName" className="block text-sm font-medium leading-6 text-gray-900">
                 School Full Name
               </label>
               <div className="mt-2">
                 <input
                   type="text"
-                  name="schoolFullName"
-                  id="schoolFullName"
+                  name="SchoolfullName"
+                  id="SchoolfullName"
                   onChange={handleChange}
-                  value={formData.schoolFullName}
+                  value={formData.SchoolfullName}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -67,7 +80,7 @@ function AddSchool() {
 
             <div className="sm:col-span-3">
               <label htmlFor="location" className="block text-sm font-medium leading-6 text-gray-900">
-                Location
+                location
               </label>
               <div className="mt-2">
                 <input
@@ -83,7 +96,7 @@ function AddSchool() {
 
             <div className="sm:col-span-4">
               <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
-                Username
+                username
               </label>
               <div className="mt-2">
                 <input
@@ -99,7 +112,7 @@ function AddSchool() {
 
             <div className="sm:col-span-4">
               <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                Password
+                password
               </label>
               <div className="mt-2">
                 <input
@@ -126,7 +139,8 @@ function AddSchool() {
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 >
                   <option value="">Select Role</option>
-                  <option value="teacher">Teacher</option>
+                  <option value="admin">admin</option>
+                  <option value="school">school</option>
                 </select>
               </div>
             </div>

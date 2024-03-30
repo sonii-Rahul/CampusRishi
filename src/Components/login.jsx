@@ -42,6 +42,10 @@ function Login() {
 
           navigate('/teacher/dashboard');
         }
+        else if (user.role == "school") {
+
+          navigate('/school');
+        }
         else {
           navigate('/student');
 
