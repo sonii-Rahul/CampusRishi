@@ -25,7 +25,12 @@ const Teacher = () => {
           });
           if (response.status === 200) {
             console.log(response.data.data)
-            setUser(response.data.data.user);
+            if(response.data.data.user.role==="teacher"){
+              setUser(response.data.data.user);
+            }else{
+              navigate('/login');
+            }
+            
           }
         } catch (error) {
           console.error('An error occurred during token verification:', error);
