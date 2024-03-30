@@ -15,6 +15,8 @@ import AddClass from './Components/teacher/Dashboard/AddClass.jsx';
 import SignUp from './Components/Login/SignUp.jsx';
 import AddSchool from './Components/admin/DashBoard/Addschool.jsx';
 import School from "./Components/school/school.jsx"
+import Addteacher from './Components/school/DashBoard/Addteacher.jsx';
+import Addcourse from './Components/school/DashBoard/Addcourse.jsx';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
              <Route path="addschool" element={<AddSchool />} />
           </Route>
           <Route path="/school" element={<School/>}>
+            <Route path='addteacher' element={<Addteacher/>}/>
+            <Route path='addcourse' element={<Addcourse/>} />
             
           </Route>
 
