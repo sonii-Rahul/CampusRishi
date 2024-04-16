@@ -6,7 +6,7 @@ import {motion} from "framer-motion"
 const menuItems = [
   {
     name: 'Home',
-    href: '#',
+    href: '/login',
   },
   {
     name: 'About',

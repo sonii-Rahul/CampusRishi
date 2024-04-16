@@ -22,7 +22,6 @@ function school() {
               },
             });
             if (response.status === 200) {
-              console.log(response.data.data)
               setUser(response.data.data.user);
             }
           } catch (error) {
@@ -62,4 +61,4 @@ function school() {
       )
     }
 
-export default school
+export default school; // Added a missing closing curly brace here

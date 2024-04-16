@@ -29,10 +29,10 @@ function SideBar(props) {
                     <span className="-mr-1 font-medium">Dashboard</span>
                   </Link>
                 </li>
-              
-       
+
+
                 <li className="min-w-max">
-                  <Link  className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                  <Link className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path className="fill-current text-gray-600 group-hover:text-orange-400" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
                       <path className="fill-current text-gray-300 group-hover:text-orange-400" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
@@ -49,14 +49,23 @@ function SideBar(props) {
                     <span className="group-hover:text-gray-700">Add Teacher</span>
                   </Link>
                   <li className="min-w-max">
-                  <Link to="/school/addcourse" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path className="fill-current text-gray-300 group-hover:text-orange-400" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                      <path className="fill-current text-gray-600 group-hover:text-orange-400" fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
-                    </svg>
-                    <span className="group-hover:text-gray-700">Add course</span>
-                  </Link>
-                </li>
+                    <Link to="/school/addcourse" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path className="fill-current text-gray-300 group-hover:text-orange-400" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                        <path className="fill-current text-gray-600 group-hover:text-orange-400" fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
+                      </svg>
+                      <span className="group-hover:text-gray-700">Add course</span>
+                    </Link>
+                  </li>
+                  <li className="min-w-max">
+                    <Link to="/school/addclass" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path className="fill-current text-gray-300 group-hover:text-orange-400" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                        <path className="fill-current text-gray-600 group-hover:text-orange-400" fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
+                      </svg>
+                      <span className="group-hover:text-gray-700">Add Class</span>
+                    </Link>
+                  </li>
                 </li>
               </ul>
             </div>

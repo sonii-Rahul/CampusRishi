@@ -17,6 +17,8 @@ import AddSchool from './Components/admin/DashBoard/Addschool.jsx';
 import School from "./Components/school/school.jsx"
 import Addteacher from './Components/school/DashBoard/Addteacher.jsx';
 import Addcourse from './Components/school/DashBoard/Addcourse.jsx';
+import SAddclass from './Components/school/DashBoard/SAddclass.jsx';
+import DashBoard from './Components/student/Dashboard/DashBoard.jsx';
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
           <Route path="/school" element={<School/>}>
             <Route path='addteacher' element={<Addteacher/>}/>
             <Route path='addcourse' element={<Addcourse/>} />
+            <Route path='addclass'  element={<SAddclass/>} />
             
           </Route>
 
@@ -46,8 +49,11 @@ function App() {
             <Route path="addclass" element={<AddClass />} />
           </Route>
 
-          <Route path="/student" element={<Student />} />
+          <Route path="/student" element={<Student />} >
+          <Route path="dashboard" element={<DashBoard/>}/>
+          </Route>
           <Route path="*" element={<Error />} />
+          
         </Routes>
       </BrowserRouter>
     </>
