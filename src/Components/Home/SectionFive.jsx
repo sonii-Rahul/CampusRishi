@@ -30,8 +30,7 @@ function SectionFive() {
         </div>
         <h3 className="mt-8 text-lg font-semibold text-black">Secured Payments</h3>
         <p className="mt-4 text-sm text-gray-600">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-          consequat duis enim velit mollit.
+        Secured payments utilize encryption and fraud detection to protect transactions, ensuring data confidentiality and mitigating cyber threats for both parties involved
         </p>
       </div>
       <div>
@@ -53,8 +52,7 @@ function SectionFive() {
         </div>
         <h3 className="mt-8 text-lg font-semibold text-black">Fast & Easy to Load</h3>
         <p className="mt-4 text-sm text-gray-600">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-          consequat duis enim velit mollit.
+        Experience lightning-fast load times and seamless navigation with our optimized platform, designed for effortless access to content and resources, enhancing your user experience
         </p>
       </div>
       <div>
@@ -76,8 +74,7 @@ function SectionFive() {
         </div>
         <h3 className="mt-8 text-lg font-semibold text-black">Light & Dark Version</h3>
         <p className="mt-4 text-sm text-gray-600">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-          consequat duis enim velit mollit.
+        Enjoy the convenience of both light and dark versions, adapting to various environments and preferences without the need for manual switching.
         </p>
       </div>
       <div>
@@ -99,8 +96,7 @@ function SectionFive() {
         </div>
         <h3 className="mt-8 text-lg font-semibold text-black">Filter Blocks</h3>
         <p className="mt-4 text-sm text-gray-600">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-          consequat duis enim velit mollit.
+        Easily refine search results and streamline content discovery with our intuitive filter block, enabling precise customization and efficient navigation through extensive datasets.
         </p>
       </div>
     </div>

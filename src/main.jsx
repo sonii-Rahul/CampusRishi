@@ -4,10 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import UserContextProvider from './Components/context/userContextProvider.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <UserContextProvider>
     <App />
     </UserContextProvider>
   </React.StrictMode>,
-)
+);

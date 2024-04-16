@@ -7,7 +7,7 @@ function SectionFour() {
   return (
     <motion.div
     initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1, delay: 0.3}}
+  whileInView={{ opacity: 1, delay: 0.5}}
   viewport={{ once: false }}
   
 >

@@ -1,12 +1,12 @@
 import React from 'react'
 import {motion} from "framer-motion"
 import myimg from "./my.jpg"
-import { useViewportScroll,useTransform } from "framer-motion"
+import { useScroll,useTransform } from "framer-motion"
 
 
 function SectionThree() {
-  const { scrollYProgress } = useViewportScroll()
-const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const { scrollYProgress } = useScroll()
+const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1.1]);
   return (
     <motion.div
     style={{ scale }}

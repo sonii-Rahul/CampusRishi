@@ -17,7 +17,7 @@ export const FaqThree = () => {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-gray-600 lg:mx-auto">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, assumenda
+            Some of the user questions
           </p>
         </div>
         <div className="mx-auto mt-8 max-w-3xl space-y-4 md:mt-16">
@@ -43,8 +43,7 @@ export const FaqThree = () => {
             >
               <div className="px-4 pb-5 sm:px-6 sm:pb-6">
                 <p className="text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquam adipisci
-                  iusto aperiam? Sint asperiores sequi nobis inventore ratione deleniti?
+                To begin using our student LMS system, simply sign up with your email and create a password. Once logged in, explore our intuitive interface to access courses, resources, and interactive features designed to enhance your learning experience.
                 </p>
               </div>
             </motion.div>
@@ -75,8 +74,7 @@ export const FaqThree = () => {
               >
                 <div className="px-4 pb-5 sm:px-6 sm:pb-6">
                   <p className="text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquam adipisci
-                    iusto aperiam? Sint asperiores sequi nobis inventore ratione deleniti?
+                  Our free account offers basic access to course materials, while our paid account provides premium features such as exclusive content, personalized support, and ad-free browsing, enhancing your learning journey."
                   </p>
                 </div>
               </motion.div>

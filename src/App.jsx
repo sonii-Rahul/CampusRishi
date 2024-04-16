@@ -12,7 +12,7 @@ import Blog from './Components/teacher/Dashboard/Blog.jsx';
 import Addattendance from './Components/teacher/Dashboard/Addattendance.jsx';
 import Assignments from './Components/teacher/Dashboard/Assignments.jsx';
 import AddClass from './Components/teacher/Dashboard/AddClass.jsx';
-import SignUp from './Components/Login/SignUp.jsx';
+import SignUp from './Components/signup/SignUp.jsx';
 import AddSchool from './Components/admin/DashBoard/Addschool.jsx';
 import School from "./Components/school/school.jsx"
 import Addteacher from './Components/school/DashBoard/Addteacher.jsx';

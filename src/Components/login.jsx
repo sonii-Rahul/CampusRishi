@@ -96,6 +96,12 @@ function Login() {
                 Create a free account
               </Link>
             </p>
+            <p className="mt-2 text-sm text-black">
+              Back Home{' '}
+              <Link to="/" className="font-semibold text-white transition-all duration-200 hover:underline">
+                Go to Home
+              </Link>
+            </p>
             <form onSubmit={handleSubmit} className="mt-8">
               <div className="space-y-5">
                 <div>
