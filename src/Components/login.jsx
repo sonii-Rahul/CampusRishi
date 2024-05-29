@@ -36,7 +36,7 @@ function Login() {
         console.log(user)
 
         if (user.role == "admin") {
-          navigate('/admin');
+          navigate('/admin/addSchool');
         }
         else if (user.role == "teacher") {
 
@@ -44,7 +44,7 @@ function Login() {
         }
         else if (user.role == "school") {
 
-          navigate('/school');
+          navigate('/school/addteacher');
         }
         else {
           navigate('/student');

@@ -1,12 +1,10 @@
-import React from 'react'
 import {motion} from "framer-motion"
-import myimg from "./my.jpg"
 import { useScroll,useTransform } from "framer-motion"
 
 
 function SectionThree() {
   const { scrollYProgress } = useScroll()
-const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1.1]);
+const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   return (
     <motion.div
     style={{ scale }}
@@ -18,7 +16,7 @@ const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1.1]);
         <h1 className="mb-4 text-4xl font-semibold text-black">What Students are saying ?</h1>
         <blockquote className="mt-10 text-xl text-white">
           <p>
-            “Students are praising CampusRishi for its intuitive interface and helpful features. They appreciate how easy it is to track their attendance and engage with educational content through the blogging platform. Many students have mentioned that Campus Rishi has positively impacted their learning experience by providing valuable insights and facilitating collaboration with their peers. Overall, students are expressing gratitude for the platform's contribution to their academic journey..”
+            “Students are praising CampusRishi for its intuitive interface and helpful features. They appreciate how easy it is to track their attendance and engage with educational content through the blogging platform. Many students have mentioned that Campus Rishi has positively impacted their learning experience by providing valuable insights and facilitating collaboration with their peers. Overall, students are expressing gratitude for the platforms contribution to their academic journey..”
           </p>
         </blockquote>
         <figcaption className="mt-10 flex items-center gap-x-6">

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect} from 'react';
 import {Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import Cookies from 'js-cookie';
@@ -7,8 +7,6 @@ import SideBar from './DashBoard/SideBar.jsx';
 
 
 function admin() {
-
-const location = useLocation();
 const navigate = useNavigate();
 const {user,setUser} = useContext(UserContext)
 
@@ -59,6 +57,7 @@ const handleLogout = async () => {
   return (
     <><div className='flex'>
     {<SideBar logingout={handleLogout}/>}
+   
     <Outlet/>
     </div>
   </>
