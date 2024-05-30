@@ -25,7 +25,6 @@ function Addcourse() {
       e.preventDefault();
       try {
         // Make the POST request to your API endpoint
-        console.log(formData)
         const response = await axios.post('/api/v1/course/courseRegister', formData);
         console.log('Response:', response.data);
     

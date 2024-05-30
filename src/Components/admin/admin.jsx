@@ -57,9 +57,13 @@ const handleLogout = async () => {
   return (
     <><div className='flex'>
     {<SideBar logingout={handleLogout}/>}
+    
    
     <Outlet/>
+    
+  
     </div>
+    
   </>
   )
 }

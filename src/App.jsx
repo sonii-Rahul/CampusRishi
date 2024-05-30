@@ -19,6 +19,9 @@ import Addteacher from './Components/school/DashBoard/Addteacher.jsx';
 import Addcourse from './Components/school/DashBoard/Addcourse.jsx';
 import SAddclass from './Components/school/DashBoard/SAddclass.jsx';
 import DashBoard from './Components/student/Dashboard/DashBoard.jsx';
+import Passkey from './Components/admin/DashBoard/Passkey.jsx';
+import Passkeylogin from './Components/passkeylogin.jsx';
+
 
 function App() {
   return (
@@ -28,19 +31,24 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/passkeylogin" element={<Passkeylogin />} />
 
           <Route path="/admin" element={<Admin />}>
-             <Route path="addschool" element={<AddSchool />} />
+            <Route path="addschool" element={<AddSchool />} />
+            <Route path="passkey" element={<Passkey />} />
+
           </Route>
-          <Route path="/school" element={<School/>}>
-            <Route path='addteacher' element={<Addteacher/>}/>
-            <Route path='addcourse' element={<Addcourse/>} />
-            <Route path='addclass'  element={<SAddclass/>} />
-            
+          <Route path="/school" element={<School />}>
+            <Route path='addteacher' element={<Addteacher />} />
+            <Route path="passkey" element={<Passkey />} />
+            <Route path='addcourse' element={<Addcourse />} />
+            <Route path='addclass' element={<SAddclass />} />
+
           </Route>
 
 
           <Route path="/teacher" element={<Teacher />}>
+          <Route path="passkey" element={<Passkey />} />
             <Route path="dashboard" element={<DashHome />} />
             <Route path="registerfrom" element={<RegisterStudent />} />
             <Route path="addblog" element={<Blog />} />
@@ -50,10 +58,11 @@ function App() {
           </Route>
 
           <Route path="/student" element={<Student />} >
-          <Route path="dashboard" element={<DashBoard/>}/>
+          <Route path="passkey" element={<Passkey />} />
+            <Route path="dashboard" element={<DashBoard />} />
           </Route>
           <Route path="*" element={<Error />} />
-          
+
         </Routes>
       </BrowserRouter>
     </>
